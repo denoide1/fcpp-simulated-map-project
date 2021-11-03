@@ -1,0 +1,4 @@
+/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/CMakeFiles/stb_image.dir
+/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/CMakeFiles/fcpp.dir

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="fcpp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stb_image">
+				<Option output="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/libstb_image.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/./external/stb_image"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 stb_image"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stb_image/fast">
+				<Option output="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/libstb_image.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/./external/stb_image"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 stb_image/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fcpp">
+				<Option output="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/libfcpp.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/."/>
+					<Add directory="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/./external/stb_image"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 fcpp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fcpp/fast">
+				<Option output="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/libfcpp.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/."/>
+					<Add directory="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/./external/stb_image"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 fcpp/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/external/stb_image/stb_image.cpp">
+			<Option target="stb_image"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/external/stb_image/stb_image.h">
+			<Option target="stb_image"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/beautify.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/beautify.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/cloud.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/cloud.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/cloud/graph_connector.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/cloud/graph_connector.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/cloud/graph_spawner.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/cloud/graph_spawner.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/algorithm.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/algorithm.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/multitype_map.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/multitype_map.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/mutex.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/mutex.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/ostream.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/ostream.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/plot.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/plot.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/profiler.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/profiler.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/quaternion.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/quaternion.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/random_access_map.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/random_access_map.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/serialize.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/serialize.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/tagged_tuple.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/tagged_tuple.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/traits.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/common/traits.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/base.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/base.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/calculus.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/calculus.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/identifier.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/identifier.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/logger.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/logger.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/randomizer.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/randomizer.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/scheduler.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/scheduler.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/storage.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/storage.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/timer.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/component/timer.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/collection.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/collection.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/election.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/election.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/geometry.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/geometry.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/spreading.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/spreading.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/time.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/time.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/utils.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/coordination/utils.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/color.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/color.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/field.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/field.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/hyperloglog.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/hyperloglog.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/shape.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/shape.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/tuple.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/tuple.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/vec.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/data/vec.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/deployment.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/deployment.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/deployment/hardware_connector.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/deployment/hardware_connector.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/deployment/hardware_identifier.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/deployment/hardware_identifier.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/deployment/hardware_logger.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/deployment/hardware_logger.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/deployment/os.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/deployment/os.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/fcpp.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/fcpp.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/internal.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/internal.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/internal/context.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/internal/context.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/internal/flat_ptr.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/internal/flat_ptr.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/internal/trace.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/internal/trace.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/internal/twin.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/internal/twin.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option/aggregator.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option/aggregator.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option/connect.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option/connect.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option/distribution.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option/distribution.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option/metric.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option/metric.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option/sequence.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/option/sequence.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/settings.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/settings.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation/batch.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation/batch.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation/simulated_connector.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation/simulated_connector.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation/simulated_map.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation/simulated_map.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation/simulated_positioner.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation/simulated_positioner.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation/spawner.cpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/lib/simulation/spawner.hpp">
+			<Option target="fcpp"/>
+		</Unit>
+		<Unit filename="/Users/gianmarcorampulla/Documents/GitHub/fcpp-dev/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
