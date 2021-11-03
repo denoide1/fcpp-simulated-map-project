@@ -14,6 +14,13 @@
  */
 namespace fcpp {
 
+//! @brief Dimensionality of the space.
+constexpr size_t dim = 2;
+//! @brief Side of the deployment area.
+constexpr size_t width = 500;
+//! @brief Height of the deployment area.
+constexpr size_t height = 500;
+
 //! @brief Namespace containing the libraries of coordination routines.
 namespace coordination {
 
@@ -55,8 +62,8 @@ MAIN() {
         return a+1;
     });
     //500 - node.position()[1] is needed to convert Y axis, renderer considers origin at (0.0) at bottom left of the viewport, bitmap considers origin (0,0) at top left of the viewport
-    auto position = make_vec(node.position()[0], 500 - node.position()[1]);
-    auto closest = make_vec(node.net.closest_obstacle(position)[0], 500 - node.net.closest_obstacle(position)[1]);
+    auto position = make_vec(node.position()[0], height - node.position()[1]);
+    auto closest = make_vec(node.net.closest_obstacle(position)[0], height - node.net.closest_obstacle(position)[1]);
     auto dist1 = distance(closest, node.position());
 
     node.storage(tags::nearest_obstacle{}) = closest;
@@ -72,7 +79,7 @@ MAIN() {
         if(diff_vec[1] > 0) node.velocity() = make_vec(node.velocity()[0],-speed); else node.velocity() = make_vec(node.velocity()[0],speed);
     }
     else {
-        rectangle_walk(CALL, make_vec(0,0), make_vec(500,500), node.storage(tags::speed{}), 0);
+        rectangle_walk(CALL, make_vec(0,0), make_vec(width,height), node.storage(tags::speed{}), 0);
     }
 
 }
