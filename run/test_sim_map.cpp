@@ -42,6 +42,8 @@ namespace tags {
     struct obstacle_delta_x {};
     //! @brief Delta Y from nearest obstacle
     struct obstacle_delta_y {};
+    //! @brief Distance from closest neighbour
+    struct distance_min_nbr {};
 }
 
 //! @brief Main function.
@@ -51,35 +53,41 @@ MAIN() {
     node.storage(tags::node_color{}) = color(GREEN);
     node.storage(tags::node_shape{}) = shape::sphere;
 
-    old(CALL, 0, [&](int a){  // used to set position of out of bound nodes at the start
-        if (a == 0 && node.net.is_obstacle(node.position())) {
+    // used to set position of out of bound nodes at the start
+    if (coordination::counter(CALL) == 1) {
+        if (node.net.is_obstacle(node.position())) {
             auto p2 = node.net.closest_space(node.position());
             int deltaX, deltaY, size = node.storage(tags::node_size{});
             if((p2 - node.position())[0] > 0) deltaX = +size; else deltaX = -size;
             if((p2 - node.position())[1] > 0) deltaY = +size; else deltaY = -size;
             node.position() = make_vec(p2[0] + deltaX, p2[1] + deltaY);
         }
-        return a+1;
-    });
+    }
+
     //500 - node.position()[1] is needed to convert Y axis, renderer considers origin at (0.0) at bottom left of the viewport, bitmap considers origin (0,0) at top left of the viewport
     auto position = make_vec(node.position()[0], height - node.position()[1]);
     auto closest = make_vec(node.net.closest_obstacle(position)[0], height - node.net.closest_obstacle(position)[1]);
     auto dist1 = distance(closest, node.position());
+    real_t min_neighbor_dist = min_hood(CALL,node.nbr_dist(),std::numeric_limits<real_t>::max());
 
     node.storage(tags::nearest_obstacle{}) = closest;
     node.storage(tags::distance_from_obstacle{}) = dist1;
+    node.storage(tags::distance_min_nbr{}) = min_neighbor_dist;
 
-    if(dist1 <= 20) {
-        node.velocity() = make_vec(0,0);
-        int speed = node.storage(tags::speed{});
-        auto diff_vec = closest - node.position();
-        node.storage(tags::obstacle_delta_x{}) = diff_vec[0];
-        node.storage(tags::obstacle_delta_y{}) = diff_vec[1];
-        if(diff_vec[0] > 0) node.velocity() = make_vec(-speed,node.velocity()[1]); else node.velocity() = make_vec(speed,node.velocity()[1]);
-        if(diff_vec[1] > 0) node.velocity() = make_vec(node.velocity()[0],-speed); else node.velocity() = make_vec(node.velocity()[0],speed);
+    if (min_neighbor_dist <= 30) {
+
+        node.propulsion() = make_vec(0,0);
+        node.propulsion() += -(coordination::neighbour_elastic_force(CALL, 0.01, 0.05));
+
+    }
+
+    if (dist1 <= 30) {
+
+        node.propulsion() = make_vec(0,0);
+        node.propulsion() = -coordination::point_elastic_force(CALL,closest,1,0.5);
     }
     else {
-        rectangle_walk(CALL, make_vec(0,0), make_vec(width,height), node.storage(tags::speed{}), 0);
+        rectangle_walk(CALL, make_vec(0,0), make_vec(width,height), node.storage(tags::speed{}), 1);
     }
 
 }
@@ -122,6 +130,7 @@ using store_t = tuple_store<
     distance_from_obstacle,     real_t,
     obstacle_delta_x,           real_t,
     obstacle_delta_y,           real_t,
+    distance_min_nbr,           real_t,
     speed,                      double,
     node_color,                 color,
     node_size,                  double,
