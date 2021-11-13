@@ -64,11 +64,9 @@ MAIN() {
         }
     }
 
-    //500 - node.position()[1] is needed to convert Y axis, renderer considers origin at (0.0) at bottom left of the viewport, bitmap considers origin (0,0) at top left of the viewport
-    auto position = make_vec(node.position()[0], height - node.position()[1]);
-    auto closest = make_vec(node.net.closest_obstacle(position)[0], height - node.net.closest_obstacle(position)[1]);
-    auto dist1 = distance(closest, node.position());
-    real_t min_neighbor_dist = min_hood(CALL,node.nbr_dist(),std::numeric_limits<real_t>::max());
+    auto closest = node.net.closest_obstacle(node.position());
+    real_t dist1 = distance(closest, node.position());
+    real_t min_neighbor_dist = min_hood(CALL, node.nbr_dist(),std::numeric_limits<real_t>::max());
 
     node.storage(tags::nearest_obstacle{}) = closest;
     node.storage(tags::distance_from_obstacle{}) = dist1;
