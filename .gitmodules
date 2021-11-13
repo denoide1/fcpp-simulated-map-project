@@ -1,4 +1,0 @@
-[submodule "fcpp"]
-	path = fcpp
-	url = https://github.com/denoide1/fcpp.git
-	branch = dev
