@@ -74,21 +74,24 @@ MAIN() {
     node.storage(tags::distance_from_obstacle{}) = dist1;
     node.storage(tags::distance_min_nbr{}) = min_neighbor_dist;
 
-    if (min_neighbor_dist <= 30) {
-
-        node.propulsion() = make_vec(0,0);
-        node.propulsion() += -(coordination::neighbour_elastic_force(CALL, 0.01, 0.05));
-
-    }
-
     if (dist1 <= 30) {
-
         node.propulsion() = make_vec(0,0);
-        node.propulsion() = -coordination::point_elastic_force(CALL,closest,1,0.5);
+        node.propulsion() = -coordination::point_elastic_force(CALL,closest,0.05,0.10);
+        if (min_neighbor_dist <= 30) {
+            node.propulsion() += -coordination::neighbour_elastic_force(CALL, 0.05, 0.05);
+        }
     }
-    else {
-        rectangle_walk(CALL, make_vec(0,0), make_vec(width,height), node.storage(tags::speed{}), 1);
+    else{
+        if (min_neighbor_dist <= 40) {
+            node.propulsion() = -coordination::neighbour_elastic_force(CALL, 0.05, 0.05);
+        }
+        else {
+            node.propulsion() = make_vec(0,0);
+            rectangle_walk(CALL, make_vec(0, 0), make_vec(width, height), node.storage(tags::speed{}), 1);
+        }
     }
+
+
 
 }
 //! @brief Export types used by the main function (update it when expanding the program).
@@ -175,7 +178,7 @@ int main() {
     //! @brief The network object type (interactive simulator with given options).
     using net_t = component::interactive_simulator<option::list>::net;
     //! @brief The initialisation values (simulation name).
-    auto init_v = common::make_tagged_tuple<option::name, option::texture, option::obstacles, option::speed>("Simulated map test", "building.png", "building.png", 5);
+    auto init_v = common::make_tagged_tuple<option::name, option::texture, option::obstacles, option::speed>("Simulated map test", "building.png", "building.png", 3);
     //! @brief Construct the network object.
     net_t network{init_v};
     //! @brief Run the simulation until exit.
