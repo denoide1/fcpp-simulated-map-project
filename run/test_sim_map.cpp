@@ -14,7 +14,15 @@
  */
 namespace fcpp {
 
-//! @brief Dimensionality of the space.
+//! @brief Dummy ordering between positions (allows positions to be used as secondary keys in ordered tuples).
+template <size_t n>
+bool operator<(vec<n> const& a, vec<n> const& b) {
+    for(int i = 0; i < n; i++)
+        if (a[i] >= b[i]) return  false;
+    return true;
+}
+
+    //! @brief Dimensionality of the space.
 constexpr size_t dim = 2;
 //! @brief Side of the deployment area.
 constexpr size_t width = 500;
@@ -46,6 +54,7 @@ namespace tags {
     struct distance_min_nbr {};
 }
 
+
 //! @brief Main function.
 MAIN() {
 
@@ -67,6 +76,7 @@ MAIN() {
     auto closest = node.net.closest_obstacle(node.position());
     real_t dist1 = distance(closest, node.position());
     real_t min_neighbor_dist = min_hood(CALL, node.nbr_dist(),std::numeric_limits<real_t>::max());
+    auto min_neighbor_pos = min_hood(CALL, node.nbr_vec(), node.position());
 
     node.storage(tags::nearest_obstacle{}) = closest;
     node.storage(tags::distance_from_obstacle{}) = dist1;
@@ -74,14 +84,18 @@ MAIN() {
 
     if (dist1 <= 30) {
         node.propulsion() = make_vec(0,0);
-        node.propulsion() = -coordination::point_elastic_force(CALL,closest,0.05,0.10);
-        if (min_neighbor_dist <= 30) {
+        node.propulsion() += -coordination::point_elastic_force(CALL,closest,1,0.10);
+        if (min_neighbor_dist <= 25) {
+            node.propulsion() = make_vec(0,0);
+            node.velocity() = make_vec(0,0);
             node.propulsion() += -coordination::neighbour_elastic_force(CALL, 0.05, 0.05);
         }
     }
-    else{
-        if (min_neighbor_dist <= 40) {
-            node.propulsion() = -coordination::neighbour_elastic_force(CALL, 0.05, 0.05);
+    else {
+        if (min_neighbor_dist <= 25) {
+            node.propulsion() = make_vec(0,0);
+            node.velocity() = make_vec(0,0);
+            node.propulsion() += -coordination::neighbour_elastic_force(CALL, 0.05, 0.05);
         }
         else {
             node.propulsion() = make_vec(0,0);
