@@ -135,7 +135,7 @@ using log_s = sequence::periodic_n<1, 0, 1>;
 //! @brief The sequence of node generation events (node_num devices all generated at time 0).
 using spawn_s = sequence::multiple_n<node_num, 0>;
 //! @brief The distribution of initial node positions (random in a 500x500 square).
-using rectangle_d = distribution::rect_n<1, 0, 0, 500, 500>;
+using rectangle_d = distribution::rect_n<1, 0, 0, 850, 500>;
 //! @brief The distribution of node speeds (all equal to a fixed value).
 using speed_d = distribution::constant_i<double, speed>;
 //! @brief The contents of the node storage as tags and associated types.
@@ -176,7 +176,7 @@ DECLARE_OPTIONS(list,
     shape_tag<node_shape>, // the shape of a node is read from this tag in the store
     size_tag<node_size>,   // the size  of a node is read from this tag in the store
     color_tag<node_color>,  // the color of a node is read from this tag in the store
-    area<0,0,500,500,1>
+    area<0,0,850,500,1>
 );
 
 } // namespace option
@@ -189,7 +189,7 @@ int main() {
     //! @brief The network object type (interactive simulator with given options).
     using net_t = component::interactive_simulator<option::list>::net;
     //! @brief The initialisation values (simulation name).
-    auto init_v = common::make_tagged_tuple<option::name, option::texture, option::obstacles, option::speed>("Simulated map test", "building.png", "building.png", 3);
+    auto init_v = common::make_tagged_tuple<option::name, option::texture, option::obstacles, option::speed, option::obstacles_color_threshold>("Simulated map test", "building2.jpeg", "building2.jpeg", 3, 0.8);
     //! @brief Construct the network object.
     net_t network{init_v};
     //! @brief Run the simulation until exit.
