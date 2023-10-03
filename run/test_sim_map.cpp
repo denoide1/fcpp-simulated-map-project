@@ -90,7 +90,7 @@ template <typename node_t, size_t n>
 inline vec<n> rectangle_walk_avoiding_obstacles(node_t& node, trace_t call_point, vec<n> const& low, vec<n> const& hi, real_t max_v, real_t period) {
     vec<n> target = random_valid_target(node, call_point, low, hi);
     return old(node, call_point, target, [&](vec<n> t){
-        std::pair<vec<n>, real_t> waypoint_dist = node.net.path_to(node.position(), t, node.uid == 0);
+        std::pair<vec<n>, real_t> waypoint_dist = node.net.path_to(node.net.closest_space(node.position()), t, node.uid == 0);
         node.storage(tags::current_target{}) = t;
         node.storage(tags::current_room_waypoint{}) = waypoint_dist.first;
         node.storage(tags::dest_room_waypoint{}) = waypoint_dist.second;
@@ -102,24 +102,32 @@ inline vec<n> rectangle_walk_avoiding_obstacles(node_t& node, trace_t call_point
 template <size_t n> using rectangle_walk_avoiding_obstacles_t = common::export_list<vec<n>>;
 
 
+//! @brief Repulsive force from obstacles.
+FUN void repel_obstacles(ARGS, real_t strength) { CODE
+    if (node.net.is_obstacle(node.position())) {
+        node.propulsion() = unit(node.net.closest_space(node.position()) - node.position()) * strength;
+    } else {
+        vec<2> t = node.position() - node.net.closest_obstacle(node.position());
+        real_t d = norm(t);
+        if (d < node.storage(tags::node_size{}))
+            node.propulsion() = unit(t) * strength * (node.storage(tags::node_size{}) - d) / node.storage(tags::node_size{});
+        else
+            node.propulsion() = make_vec(0,0);
+    }
+}
+
+
 //! @brief Main function.
 MAIN() {
-
     node.storage(tags::node_size{}) = 10;
     node.storage(tags::node_color{}) = color(GREEN);
     node.storage(tags::node_shape{}) = shape::sphere;
     
     // used to set position of out of bound nodes at the start
-    if (counter(CALL) == 1) {
-        if (node.net.is_obstacle(node.position())) {
-            auto p2 = node.net.closest_space(node.position());
-            int deltaX, deltaY, size = node.storage(tags::node_size{});
-            if((p2 - node.position())[0] > 0) deltaX = +size; else deltaX = -size;
-            if((p2 - node.position())[1] > 0) deltaY = +size; else deltaY = -size;
-            node.position() = make_vec(p2[0] + deltaX, p2[1] + deltaY);
-        }
-    }
-    rectangle_walk_avoiding_obstacles(CALL, make_vec(0,0), make_vec(1200,800), 20, 1);
+    if (counter(CALL) == 1 and node.net.is_obstacle(node.position()))
+        node.position() = node.net.closest_space(node.position());
+    rectangle_walk_avoiding_obstacles(CALL, make_vec(0,0), make_vec(1200,800), 5, 1);
+    repel_obstacles(CALL, 5);
 }
 //! @brief Export types used by the main function (update it when expanding the program).
 FUN_EXPORT main_t = common::export_list<counter_t<>, rectangle_walk_avoiding_obstacles_t<2>>;
